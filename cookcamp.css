@@ -1,0 +1,234 @@
+/*コンテンツ外側の余白を削除*/
+/*背景を黄緑色に指定*/
+body{
+    margin:0;
+    padding:0;
+    background-color:#f5f5dd;
+}
+
+/*コンテンツを中央寄せ*/
+.center{
+    width:960px;
+    margin:0 auto;
+}
+
+/*ヘッダー部背景を白に*/
+header{
+    background-color:white;
+    border-bottom:solid 2px #cccccc;
+    min-width:960px;
+}
+/*min-widthを指定しないと、ブラウザの横幅が960px以下のときに下線が消える*/
+
+/*ロゴ*/
+header img{
+    float:left;
+}
+/*検索ボタン*/
+header input{
+    float:right;
+    margin:15px 0;
+}
+/*ロゴ下の説明文*/
+header p{
+    padding:0;
+    margin:0;
+    clear:left;
+    float:left;
+    color:#664433;
+}
+
+/*トップメニュー部分*/
+.top-menu{
+    clear:both;
+    display:flex;
+    margin:3px 0;
+    padding:0;
+    list-style:none;
+}
+.top-menu li{
+    flex:1;
+    border-right:solid 1px #cccccc;
+}
+.top-menu a{
+    color:#664433;
+    display:block;
+    text-align:center;
+    text-decoration:none;
+}
+/*last-childを使って最後の境界線を削除*/
+.top-menu li:last-child{
+    border-right:0;
+}
+
+/*ヘッダー画像*/
+.img-header{
+    display:block;
+    width:960px;
+    margin:0 auto 10px auto;
+}
+
+/*メイン部*/
+/*ナビ、アーティクル、アサイド部分を分けて配置*/
+.main{
+    display:flex;
+    width:960px;
+    margin:0 auto;
+    padding:0;
+}
+/*セクションの背景色と余白を設定*/
+section{
+    margin:0;
+    padding:3px 10px 0 10px;
+    background-color:white;
+}
+/*タイトル部分を角丸に*/
+/*食器の画像はbackground-imageで先頭に*/
+h2{
+    color:white;
+    font-size:18px;
+    font-weight:normal;
+    background-color:#99bb22;
+    border-radius: 20px;
+    padding:3px 0 3px 40px;
+    margin:10px 0;
+    background-image:url(CookCamp/images/icon/dish.png);
+    background-repeat:no-repeat;
+    background-position:left 15px center;
+}
+
+/*ナビ部*/
+/*セクション間に余白を作る*/
+nav section{
+    margin-bottom:10px;
+}
+nav{
+    flex:2;
+}
+nav ul{
+    list-style-type:none;
+    padding:10px 0;
+    margin:0;
+}
+nav a:before{
+    content: url(CookCamp/images/icon/arrow.png)" ";
+}
+nav a{
+    color:black;
+    text-decoration:none;
+    display:block;
+}
+nav li{
+    border-bottom:dashed 1px #cccccc;
+}
+nav li:last-child{
+    border-bottom:none;
+}
+
+/*アーティクル部*/
+article{
+    width:960px;
+    margin:0 auto;
+    background-color:#f5f5dd;
+    flex:6;
+}
+article section{
+    margin:0 10px 10px 10px;
+}
+
+/*新着レシピ*/
+.recipes{
+    display:flex;
+}
+.recipes a{
+    display:block;
+    flex:1;
+    text-decoration:none;
+    margin:10px 0;
+}
+.recipes p{
+    font-size:0.6em;
+    color:black;
+    margin:0;
+    padding:0;
+    text-align:center;
+}
+.recipes img{
+    display:block;
+    margin:0 auto;
+    padding:0;
+}
+
+/*和食部分*/
+.topics{
+    display:flex;
+    padding:0 10px 10px 10px;
+    margin:0;
+}
+.topics img{
+    display:block;
+    flex:2;
+    float:left;
+    height:100%;
+    margin:20px 20px 0 0;
+}
+.topics-p{
+    margin:0;
+    padding:0;
+    flex:3;
+    font-size:12px;
+    text-indent:1em;
+}
+/*1emで一文字分のインデントを空けられる*/
+.topics a{
+    display:block;
+    color:#fc8833;
+    text-align:right;
+    text-decoration:none;
+    background-image:url(CookCamp/images/icon/arrow.png);
+    background-repeat:no-repeat;
+    background-position:right 65px center;
+}
+/*「続きを読む」の右寄せや文字色など*/
+.topics-p h3{
+    color:maroon;
+}
+
+/*アサイド部*/
+aside{
+    margin:0;
+    flex:1;
+}
+aside img{
+    margin-bottom:10px;
+}
+
+/*フッター部分*/
+footer{
+    background-color:white;
+    margin:0;
+    padding:10px 0;
+    border-top:solid 2px #cccccc;
+    min-width:960px;
+}
+.footer-menu{
+    width:960px;
+    margin:0 auto;
+    display:flex;
+}
+.footer-menu a{
+    color:#664433;
+    display:block;
+    flex:1;
+    text-decoration:none;
+    text-align:center;
+    border-right:solid 1px #cccccc;
+}
+.footer-menu a:last-child{
+    border-right:0;
+}
+footer p{
+    margin:0 auto;
+    width:960px;
+    text-align:center;
+}
